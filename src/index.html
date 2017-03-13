@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html ng-app="calculatorApp">
+    <head>
+        <title>Template Hello</title>
+        <!-- Third Party Styles -->
+<link rel="stylesheet" href="lib/angular/angular-csp.css"/>
+        <!-- Application Styles -->
+    </head>
+<body>
+    <h1>Calculator App</h1>
+        <div ng-controller="CalculatorHp as hp">
+            
+            <input type="text" ng-model="hp.input1"></input>
+            <span ng-bind="hp.selectedOperation"></span>    
+            <input type="text" ng-model="hp.input2"></input>
+            <button ng-click="hp.calculateResult()">=</button>
+            <span ng-bind="hp.resultValue"></span>
+        <p>
+            Choose Operation:
+            <button ng-click="hp.ButtonClicked('+')">+</button>    
+            <button ng-click="hp.ButtonClicked('-')">-</button> 
+            <button ng-click="hp.ButtonClicked('*')">*</button> 
+            <button ng-click="hp.ButtonClicked('/')">/</button> 
+             
+        </p>
+      {{hp.input1}} {{hp.input2}}
+        </div>
+      
+<!-- Third Party Scripts -->
+<script src="lib/angular/angular.min.js"></script>
+    <!-- Application Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
